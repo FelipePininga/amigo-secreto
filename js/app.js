@@ -5,6 +5,10 @@ function adicionar(){
         alert('Informe o nome do amigo!');
         return;
     }
+    if(amigos.includes(amigo.value)){
+        alert(`${amigo.value} já existe na lista!`);
+        return;
+    }
     let lista=document.getElementById('lista-amigos');
     amigos.push(amigo.value);
     if(lista.textContent==''){
